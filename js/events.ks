@@ -1,0 +1,1 @@
+window.addEventListener('load', prepare_events);

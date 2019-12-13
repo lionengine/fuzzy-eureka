@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pylypchuk</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css?dfjshdkfhk">
+	<link rel="stylesheet" type="text/css" href="css/black.css?dfjshdkfhk">
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/events.js"></script>
+	<script type="text/javascript" src="js/theme.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div id="spin_button">
+			<div class="spin_layer"></div>
+			<div class="spin_layer"></div>
+			<div class="spin_layer"></div>
+		</div>
+		<div id="nav_container">
+			<div class="nav_item">Item 1</div>
+			<div class="nav_item">Item 2</div>
+			<div class="nav_item">Item 3</div>
+			<div class="nav_item">Item 4</div>
+			<div class="nav_item dropdown">
+				<div class="dropdown_text">
+					Item 5
+					<span class="dropdown_triangle"></span>
+				</div>
+				<div class="dropdown_list">
+					<div>Item 1dsfdfsdfsdfsdf</div>
+					<div>Item 2</div>
+					<div>Item 3</div>
+				</div>
+			</div>
+			<div class="nav_item">Item 6</div>
+			<div class="nav_item">Item 7</div>
+			<div id="theme_button" class="nav_item white">Change theme</div>
+		</div>
+	</div>
+
+	<div id="page_content">
+		<div id="first_block">
+			<div id="test_container">
+				<div class="test_container">
+						<div id="keydown_output">Text will appear here</div>
+						<textarea id="keydown_input"></textarea>
+				</div>
+				<div class="test_container">
+						<div id="mouse_events">
+							Push some mouse buttons over here
+						</div>
+				</div>
+				<div class="clear_float"></div>
+			</div>
+			TEXT ABOVE IMAGE
+			<img src="css/img/top.png">
+			TEXT BELOW IMAGE
+		</div>
+		<div id="form_block">
+			<form name="feedback_form" method="POST">
+				<div class="input_block">
+					<div class="input_label">Your name: </div>
+					<div id="input_warning" class="form_warning">
+						Please type in a correct name!
+					</div>
+					<input type="text" name="user_name">
+				</div>
+				<div class="input_block">
+					<div class="input_label">Your lastname: </div>	
+					<div id="input_warning" class="form_warning">
+						Please type in a correct Last Name!
+					</div>	
+					<input type="text" name="user_lastname">
+				</div>
+				<div class="input_block">
+					<div class="input_label">Your e-mail: </div>
+					<div id="input_warning" class="form_warning">
+						Please enter a correct E-Mail!
+					</div>
+					<input type="email" name="user_email">
+				</div>
+				<div class="input_block">
+					<div class="input_label">Specify gender: </div>
+					<div id="radio_container">
+						<input id="g_male" type="radio" name="user_gender"
+							value="male">
+						<label for="g_male">Male</label>
+						
+						<input id="g_female" type="radio" name="user_gender"
+							value="female">
+						<label for="g_female">Female</label>
+
+						<input id="g_no" type="radio" name="user_gender"
+							value="no_gender" checked="checked">
+						<label for="g_no">No gender</label>
+					</div>
+				</div>
+				<div class="input_block">
+					<div class="input_label">
+						Specify the type of your madness:
+					</div>
+					<input id="madness_penny" type="checkbox"
+						name="user_madness" value="pwise">
+					<label for="madness_penny">Pennywise</label>
+
+					<input id="madness_joker" type="checkbox"
+						name="user_madness" value="joker">
+					<label for="madness_joker">Joker</label>
+				</div>
+				<div class="input_block">
+					<div id="input_warning" class="form_warning">
+						Message cannot be EMPTY!
+					</div>
+					<textarea id="form_textarea" form="feedback_form"></textarea>
+				</div>
+				<div class="input_block">
+					<input type="submit" value="Send to Trash">
+				</div>
+			</form>
+		</div>
+		<div id="table_block">
+			<table>
+				<caption>This is a table, okay</caption>
+				<tr>
+					<td colspan="2">Column 1 (ColSpan: 2)</td>
+					<td>Column 2</td>
+					<td>Column 3</td>
+					<td>Column 4</td>
+					<td>Column 5</td>
+					<td>Column 6</td>
+					<td>Column 7</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Column 1 (RowSpan: 2)</td>
+					<td>Column 2</td>
+					<td>Column 3</td>
+					<td>Column 4</td>
+					<td>Column 5</td>
+					<td>Column 6</td>
+					<td>Column 7</td>
+					<td>Column 8</td>
+				</tr>
+				<tr>
+					<td>Column 1</td>
+					<td>Column 2</td>
+					<td>Column 3</td>
+					<td>Column 4</td>
+					<td>Column 5</td>
+					<td>Column 6</td>
+					<td>Column 7</td>
+				</tr>
+				<tr>
+					<td>Column 1</td>
+					<td>Column 2</td>
+					<td>Column 3</td>
+					<td>Column 4</td>
+					<td>Column 5</td>
+					<td>Column 6</td>
+					<td>Column 7</td>
+					<td>Column 8</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div id="footer_content">
+			Footer
+		</div>
+	</div>
+</body>
+</html>

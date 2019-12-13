@@ -1,0 +1,52 @@
+#header.black {
+	background: rgba(0, 0, 0, .8);
+}
+	
+#header.black #spin_button .spin_layer {
+	background: white;
+}
+#header.black .nav_item {
+	border: 1px solid red;
+	color: #fff000;
+}
+#header.black .nav_item#theme_button {
+	border: 2px solid green;
+	color: #ff00ff;
+}
+#header.black .nav_item.dropdown .dropdown_triangle {
+	border-top: 7px solid #fff000;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+}
+#header.black .nav_item.dropdown:hover .dropdown_triangle {
+	border-top: none;
+	border-bottom: 7px solid #fff000;
+}
+#header.black .nav_item.dropdown .dropdown_list div {
+	background: black;
+	border: 1px solid green;
+	color: white;
+}
+#header.black .nav_item.dropdown .dropdown_list div:hover {
+	background: red;
+}
+#page_content.black  {
+	background: black;
+	color: white;
+}
+#page_content.black #first_block, #form_block, #table_block {
+	border-bottom: 3px solid white;
+}
+#page_content.black #first_block img {
+	border: 5px solid red;
+}
+#page_content.black #table_block table,
+#table_block tr,
+#table_block td {
+	border: 1px solid white;
+}
+#footer.black {
+	background: black;
+	color: yellow;
+	border-color: green;
+}

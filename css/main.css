@@ -1,0 +1,284 @@
+html, body { margin: 0; padding: 0; }
+.clear_float { clear: both; }
+
+#header {
+	position: sticky;
+	top: 0;
+	background: rgba(255, 255, 255, .8);
+}
+#spin_button {
+	display: none;
+	padding: 10px;	
+}
+#spin_button:hover { background: black; }
+#spin_button:hover .spin_layer { background: white; }
+#spin_button .spin_layer {
+	width: 20px;
+	height: 3px;
+	margin-top: 3px;
+	background: black;
+}
+#spin_button .spin_layer:first-child { margin-top: 0; }
+#nav_container {
+	border: 1px solid black;
+	padding: 5px;
+}
+#nav_container .nav_item {
+	display: inline-block;
+	border: 1px solid black;
+	padding: 5px;
+	cursor: pointer;
+}
+#nav_container .nav_item#theme_button {
+	border: 2px solid red;
+	color: red;
+}
+#nav_container .nav_item#theme_button:hover {
+	background: purple;
+	color: white;
+}
+#nav_container .nav_item:hover {
+	background: blue;
+	color: white;
+}
+#nav_container .nav_item.dropdown {
+	padding: 0;
+	position: relative;
+}
+.nav_item.dropdown .dropdown_text {
+	padding: 5px;
+}
+.nav_item.dropdown .dropdown_triangle {
+	display: inline-block;
+	border-top: 7px solid black;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+}
+.nav_item.dropdown .dropdown_list {
+	display: none;
+	position: absolute;
+	top: 100%;
+	min-width: 100%;
+	max-width: 300px;
+	border-radius: 0 5px;
+	background: purple;
+	color: white;
+}
+.nav_item.dropdown .dropdown_list div {
+	padding: 5px;
+}
+.nav_item.dropdown .dropdown_list div:hover {
+	background: red;
+}
+
+#nav_container .nav_item.dropdown:hover .dropdown_list {
+	display: block;
+}
+.nav_item.dropdown:hover .dropdown_triangle {
+	border-top: none;
+	border-bottom: 7px solid white;
+}
+#page_content {
+	padding: 15px 0;
+}
+#first_block, #form_block, #table_block {
+	border-bottom: 3px solid black;
+	text-align: center;
+	margin: 10px 0;
+}
+#first_block img {
+	display: block;
+	width: 90%;
+	margin: 10px auto;
+	border: 5px solid purple;
+}
+#footer {
+	position: relative;
+	text-align: center;	
+	padding: 10px;
+	border: 1px solid black;
+}
+
+
+@media (max-width: 540px) {
+	#nav_container { display: none; }
+	#spin_button { display: block; }
+}
+@media (max-width: 320px) {
+	#first_block img {
+		width: 100%;
+		margin: 10px 0;
+		border-left: none;
+		border-right: none;
+	}
+}
+
+/*---------------------------------------------------------------------------*
+ *                              FORM                                         *
+ *---------------------------------------------------------------------------*/
+#form_block .input_block .input_label {
+	margin: 15px 0;
+	font-family: sanf-serif;
+	font-size: 1.2rem;
+	font-style: italic;
+	color: #ff207f;
+}
+#form_block .block_container input[type=text] {
+	display: block;
+}
+
+#form_block .input_block input[type=text],
+#form_block .input_block input[type=email] {
+	padding: 10px 25px;
+	width: 250px;
+	border: none;
+	border-bottom: 3px solid orange;
+	outline: none;
+	text-align: center;
+	background: purple;
+	color: white;
+}
+
+#form_block .input_block textarea {
+	resize: none;
+	min-width: 320px;
+	width: 25%;
+	min-height: 150px;
+	background: white;
+	border: 1px solid purple;
+	color: black;
+	padding: 10px;	
+}
+#form_block .input_block input[type=submit] {
+	padding: 10px 20px;
+	margin: 10px 0;
+	box-shadow: 1px 1px 5px black;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+#form_block .input_block input[type=submit]:hover {
+	box-shadow: none;
+	background: red;
+}
+#form_block .input_block {
+	width: 100%;
+}
+#form_block .input_block .form_warning {
+	display: none;
+	text-decoration: underline;
+	color: red;
+	margin: 10px 0;
+}
+#form_block .input_block input.warning {
+	background: red;
+	color: white;
+	border-bottom: 3px solid purple;
+}
+#form_block .input_block textarea.warning {
+	background: red;
+	color: white;
+	border: 1px solid black;
+}
+@media (max-width: 320px) {
+	#form_block .input_block input[type=text],
+	#form_block .input_block input[type=email] {
+		width: 90	%;
+		padding: 10px 0;
+		margin: 5px;
+	}
+	#form_block .input_block {
+		width: 100%;
+		margin: 0;
+	}
+	#form_block textarea {
+		width: 100%;
+	}
+}
+
+/*---------------------------------------------------------------------------*
+ *                              TABLE                                        *
+ *---------------------------------------------------------------------------*/
+@font-face {
+	font-family: "Caveat";
+	src: url(fonts/Caveat-Regular.ttf);
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Caveat";
+	src: url(fonts/Caveat-Bold.ttf);
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Indie Flower";
+	src: (fonts/IndieFlower-Regular.ttf);
+	font-style: normal;
+	font-weight: normal;
+}
+#table_block table {
+	font-family: "Caveat", "Indie Flower";
+	font-style: normal;
+	font-size: 1.5rem;
+	margin: 15px auto;
+	border-collapse: collapse;
+}
+
+#table_block table,
+#table_block tr,
+#table_block td {
+	border: 1px solid black;
+}
+
+#table_block td {
+	padding: 5px;
+}
+
+@media (max-width: 800px) {
+	#table_block table {
+		table-layout: fixed;
+		margin: 15px 0;
+		width: 100%;
+		max-width: 100%;
+		font-size: 1.1rem;
+	}
+	#table_block td {
+		word-break: break-all;
+	}
+}
+
+
+/*---------------------------------------------------------------------------*
+ *                             JS Events                                     *
+ *---------------------------------------------------------------------------*/
+#first_block .test_container {
+	float: left;
+	border: 1px solid blue;
+	word-wrap: break-word;
+	margin: 5px;
+}
+#first_block .test_container #keydown_output {
+	min-width: 300px;
+	max-width: 300px;
+	display: block;
+	height: 25px;
+	max-height: 25px;
+	overflow-y: auto;
+}
+#first_block .test_container #keydown_input {
+	resize: none;
+	display: block;
+	border: none;
+	margin-top: 10px;
+	padding: 5px;
+	border-top: 1px solid black;
+	min-width: 300px;
+	max-width: 300px;
+}
+#first_block .test_container #mouse_events {
+	width: 150px;
+	height: 80px;
+	padding: 5px;
+	overflow-y: auto;
+}
